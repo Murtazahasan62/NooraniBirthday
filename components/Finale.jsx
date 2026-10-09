@@ -55,8 +55,12 @@ export default function Finale({ choice, secretsFound, onSecret, onReplay }) {
           <motion.p className="finale-line" variants={item} key={k}>{l}</motion.p>
         ))}
         {CONFIG.personalNote && (
-          <motion.p className="finale-line personal" variants={item}>{CONFIG.personalNote}</motion.p>
-        )}
+          <motion.div className="poem" variants={item}>
+            {CONFIG.personalNote.split("\n").map((line, k) => (
+              <p key={k} className="finale-line personal">{line || "\u00a0"}</p>
+        ))}
+  </motion.div>
+)}
 
         <motion.div variants={item} className="cake-wrap">
           <button className="cake-btn" onClick={blow} aria-label={lit ? F.candleHint : F.wishLine}>
