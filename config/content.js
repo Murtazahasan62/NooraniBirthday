@@ -14,10 +14,10 @@ export const CONFIG = {
   photoCaption: "Happy Birthday Beautiful!",
 
   // Optional: one or two sentences in your own words, shown in the final reveal. Leave "" to skip.
-  personalNote: "Benoor zindagi mein noor chahiye,  
-Pur-ashob zindagi mein jeene ka shaoor chahiye,  
-Ishq-o-mohabbat se waasta yun toh nahi mera,  
-Zindagi mein bas suroor-e-noor chahiye.",
+  personalNote: 'Benoor zindagi mein noor chahiye, \
+Pur-ashob zindagi mein jeene ka shaoor chahiye, \
+Ishq-o-mohabbat se waasta yun toh nahi mera, \
+Zindagi mein bas suroor-e-noor chahiye.',
 
   // Optional: inside jokes, shown as small stickers in the final reveal. Example: ["The pizza incident"]
   insideJokes: [],
