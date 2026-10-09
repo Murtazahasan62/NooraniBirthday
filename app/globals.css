@@ -167,13 +167,14 @@ button:focus-visible { outline: 3px solid var(--lilac); outline-offset: 4px; bor
 .finale-card { gap: 12px; padding-top: 28px; }
 .finale-title { font-size: clamp(2rem, 9.5vw, 3rem); background: linear-gradient(135deg, #ff6f9c, #8f6bff); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; padding-bottom: 4px; }
 .finale-line { margin: 0; font-size: 1.12rem; line-height: 1.4; max-width: 30ch; text-wrap: balance; }
-.finale-line.personal {
+.poem { width: 100%; display: flex; flex-direction: column; gap: 4px; margin: 8px 0; }
+.poem-line {
+  margin: 0;
   font-family: var(--font-hand);
-  font-size: 1.5rem;
-  line-height: 1.25;
   font-weight: 700;
-  white-space: pre-line;
-  max-width: 28ch;
+  font-size: clamp(1.05rem, 4.6vw, 1.3rem);
+  line-height: 1.2;
+  text-wrap: balance;
 }
 .cake-wrap { display: flex; flex-direction: column; align-items: center; gap: 2px; margin: 4px 0; }
 .cake-btn { width: 190px; border-radius: 20px; }

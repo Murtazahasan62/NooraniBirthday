@@ -54,13 +54,19 @@ export default function Finale({ choice, secretsFound, onSecret, onReplay }) {
         {F.lines.map((l, k) => (
           <motion.p className="finale-line" variants={item} key={k}>{l}</motion.p>
         ))}
-        {CONFIG.personalNote && (
-          <motion.div className="poem" variants={item}>
-            {CONFIG.personalNote.split("\n").map((line, k) => (
-              <p key={k} className="finale-line personal">{line || "\u00a0"}</p>
-        ))}
-  </motion.div>
-)}
+        {(() => {
+  const noteLines = Array.isArray(CONFIG.personalNote)
+    ? CONFIG.personalNote
+    : String(CONFIG.personalNote || "").split(/\r?\n/);
+  if (!noteLines.some((l) => l.trim())) return null;
+  return (
+    <motion.div className="poem" variants={item}>
+      {noteLines.map((line, k) => (
+        <p key={k} className="poem-line">{line || "\u00a0"}</p>
+      ))}
+    </motion.div>
+  );
+})()}
 
         <motion.div variants={item} className="cake-wrap">
           <button className="cake-btn" onClick={blow} aria-label={lit ? F.candleHint : F.wishLine}>
